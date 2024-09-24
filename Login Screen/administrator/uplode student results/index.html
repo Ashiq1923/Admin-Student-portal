@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Marks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+    <div class="main-container"></div>
+        <div class="sidebar">
+                <span class="logo">Admin Portal</span>
+            <div class="buttons">
+                <a href="/Login Screen/A-dashbord/index.html" class="rig-bt">Home</a>
+                <a href="/Login Screen/administrator/add student/index.html" class="rig-btn">Rigister Student</a>
+                <a href="/Login Screen/administrator/view student list screen/index.html" class="add-btn">Students List</a>
+                <a href="/Login Screen/administrator/view results/index.html" class="result-btn">Result List</a>
+            </div>
+            <button id="logout">Logout</button>
+        </div>
+        <div class="content">
+            <div class="container">
+                <a class="back-btn" href="/Login Screen/administrator/view student list screen/index.html">Back</a>
+                <div class="notify"></div>
+                <h1>Upload Student Result</h1>
+                <form>
+                    <input type="text" id="course" placeholder="Course" required>
+                    <input type="text" id="studentid" placeholder="Student ID" required>
+                    <input type="number" id="marks" placeholder="Marks" required>
+                    <input type="number" id="totalmarks" placeholder="Total Marks" required>
+                    <input type="text" id="grade" placeholder="Grade" required>
+                    <button type="button"  id="addresult">Add Marks</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>

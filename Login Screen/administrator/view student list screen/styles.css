@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-container {
+    display: flex; /* Use flexbox for main layout */
+}
+
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    width: 250px; /* Fixed width for sidebar */
+    height: 95vh; /* Full height */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space out items */
+}
+
+.logo {
+    font-size: 30px;
+    padding-bottom: 80px;
+    margin-top: 10px;
+
+}
+
+.add-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%; /* Full width for buttons */
+    margin: 10px 0; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.buttons {
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+}
+
+a {
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%; /* Full width for buttons */
+    margin: 10px 0; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners */
+}
+
+a:hover {
+    background-color: #2980b9;
+}
+
+#logout {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    margin-top: auto; /* Push logout button to bottom */
+}
+
+#logout:hover {
+    background-color: #c0392b;
+}
+
+.content {
+    flex-grow: 1; /* Allow content to grow */
+    padding: 20px;
+    background-color: #ecf0f1; /* Light background for content area */
+}
+
+/* Scrollable Table */
+.table {
+    width: 100%; /* Adjust table width */
+    max-height: 600px; /* Set max height for the table */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.table table {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-collapse: collapse; /* Ensures borders are merged */
+}
+
+thead {
+    background-color: #4CAF50; /* Green header */
+    color: white;
+}
+
+.table table th, .table table td {
+    padding: 10px 10px;
+    border-bottom: 2px solid;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    
+}
+
+.table table th thead {
+    font-weight: bold; /* Make header text bold */
+}
+
+.table table td button {
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    border: 1px solid #111;
+}
+
+.del_btn {
+    background: rgb(252, 13, 13);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.up_btn {
+    background: rgba(0, 157, 255, 0.76);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.up_btn a {
+    color: #1b1919;
+}
+
+.table table td button:hover {
+    background: transparent;
+    color: #111;
+}
+
+.update_data {
+    display: none;
+}
+
+.add-result-btn {
+    background: rgba(4, 226, 4, 0.685);
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 15px;
+    }
+    .main-container {
+        flex-direction: row; /* Stack sidebar and content vertically */
+    }
+    .sidebar {
+        width: 100px; /* Full width on smaller screens */
+        height: auto; /* Adjust height */
+        font-size: 10px;
+    }
+    .container {
+        max-width: 90%; /* Adjust max-width for small screens */
+        margin: 20px auto; /* Center the container */
+        padding: 20px;
+    }
+    .notify {
+        margin-left: 0; /* Center on smaller screens */
+        text-align: center; /* Center text */
+    }
+}
+
+.notify {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: rgba(8, 226, 8, 0.699);
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.reloadPage {
+    margin-bottom: 10px;
+    color: #4CAF50;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

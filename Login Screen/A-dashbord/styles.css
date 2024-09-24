@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex; /* Use flexbox for main layout */
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    width: 250px; /* Fixed width for sidebar */
+    height: 95vh; /* Full height */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space out items */
+}
+
+.logo {
+    margin-top: 10px;
+    font-size: 30px;
+    padding-bottom: 80px;
+}
+.home-btn{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 99%; /* Full width for buttons */
+    margin: 10px 0; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners */
+
+}
+.buttons {
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+}
+
+a {
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 99%; /* Full width for buttons */
+    margin: 10px 0; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners */
+}
+
+a:hover {
+    background-color: #2980b9;
+}
+
+#logout {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    margin-top: auto; /* Push logout button to bottom */
+}
+
+#logout:hover {
+    background-color: #c0392b;
+}
+
+.content {
+    flex-grow: 1; /* Allow content to grow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ecf0f1; /* Light background for content area */
+}
+
+.welcome-circle {
+    width: 400px;
+    height: 400px;
+    margin-top: 20px; /* Adjust margin */
+    border-radius: 50%;
+    background-color: #ffffff; /* White background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    animation: rgb-light-effect 2s infinite; 
+}
+
+@keyframes rgb-light-effect {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.5), 0 0 45px rgba(0, 0, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.7), 0 0 60px rgba(0, 255, 0, 0.7), 0 0 90px rgba(0, 0, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.5), 0 0 45px rgba(0, 0, 255, 0.5);
+    }
+}
+.welcome-circle span {
+    font-size: 40px;
+    font-weight: bolder;
+    position: relative;
+    z-index: 2;
+    
+}
+
+.welcome-circle:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: #ecf0f1; /* Light background */
+    z-index: -1;
+    filter: blur(8px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    body{
+        height: auto;
+    }
+    .container {
+
+        width: 92.5%;
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height */
+    }
+
+    .welcome-circle {
+        width: 80%; /* Responsive width */
+        height: auto; /* Adjust height */
+        max-width: 300px; /* Max width */
+    }
+}

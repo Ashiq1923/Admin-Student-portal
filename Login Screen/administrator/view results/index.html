@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-container"></div>
+    <div class="sidebar">
+            <span class="logo">Admin Portal</span>
+        <div class="buttons">
+            <a href="/Login Screen/A-dashbord/index.html" class="rig-bt">Home</a>
+            <a href="/Login Screen/administrator/add student/index.html" class="rig-btn">Rigister Student</a>
+            <a href="/Login Screen/administrator/view student list screen/index.html" class="add-btn">Students List</a>
+            <a href="/Login Screen/administrator/view results/index.html" class="result-btn">Result List</a>
+
+        </div>
+
+        <button id="logout">Logout</button>
+    </div>
+    <div class="content">
+        <div class="notify"></div>
+        <div class="table">            
+            <button onclick="reloadPage()" class="reloadPage"><i class="fa-solid fa-rotate-right"></i></button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>CNIC #</th>
+                        <th>Corce</th>
+                        <th>Student ID</th>
+                        <th>Marks</th>
+                        <th>Total Marks</th>
+                        <th>Grade</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    
+    <script type="module" src="app.js"></script>
+</body>
+</html>
